@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contents",
+  "info": {
+    "singularName": "content",
+    "pluralName": "contents",
+    "displayName": "Content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Subject": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "content_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::content-group.content-group",
+      "inversedBy": "contents"
+    },
+    "Video": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "string"
+    }
+  }
+}
